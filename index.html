@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luma Bloom | Магазин косметики</title>
+    <meta
+      name="description"
+      content="Учебный сайт магазина косметики с вкладками, каталогом, подбором ухода, бонусной программой и интерактивными разделами."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="site-header">
+      <div class="brand-block">
+        <div class="brand-mark">LB</div>
+        <div>
+          <p class="brand-overline">Beauty concept store</p>
+          <a href="#" class="brand-name">Luma Bloom</a>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <button class="nav-tab is-active" data-tab="home">Главная</button>
+        <button class="nav-tab" data-tab="catalog">Каталог</button>
+        <button class="nav-tab" data-tab="ritual">Подбор ухода</button>
+        <button class="nav-tab" data-tab="club">Beauty Club</button>
+        <button class="nav-tab" data-tab="journal">Журанл</button>
+        <button class="nav-tab" data-tab="contacts">Контакты</button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ghost-button" id="openFavoritesButton">
+          Избранное
+          <span class="badge" id="favoritesCount">0</span>
+        </button>
+        <button class="primary-button" id="openCartButton">
+          Корзина
+          <span class="badge badge-light" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="tab-panel is-active" data-panel="home">
+        <section class="hero-card reveal">
+          <div class="hero-copy">
+            <p class="section-kicker">Новая весенняя подборка</p>
+            <h1>Магазин косметики с атмосферой бутика и цифровым уходом.</h1>
+            <p class="hero-description">
+              Витрина, каталог, персональный подбор, бонусная программа, журнал
+              с советами и красивый интерфейс в одном учебном проекте.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button large-button" data-jump="catalog">
+                Смотреть каталог
+              </button>
+              <button class="secondary-button large-button" data-jump="ritul">
+                Собрать рутину
+              </button>
+            </div>
+            <div class="hero-metrics">
+              <article>
+                <strong>120+</strong>
+                <span>товаров в витрине</span>
+              </article>
+              <article>
+                <strong>6</strong>
+                <span>разделов сайта</span>
+              </article>
+              <article>
+                <strong>24/7</strong>
+                <span>онлайн-заказ и помощь</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="glass-card">
+              <p class="mini-label">Лимитированная коллекция</p>
+              <h2>Velvet Dew</h2>
+              <p>
+                Сияющие текстуры, растительные экстракты и мягкие оттенки для
+                весеннего образа.
+              </p>
+              <div class="mini-pills">
+                <span>Glow serum</span>
+                <span>Cream blush</span>
+                <span>Peptide mask</span>
+              </div>
+            </div>
+            <div class="floating-card top-card">
+              <span>Best seller</span>
+              <strong>Rose Cloud Essence</strong>
+              <p>+37% повторных заказов за месяц</p>
+            </div>
+            <div class="floating-card bottom-card">
+              <span>Доставка</span>
+              <strong>Бесплатно от 4900 RUB</strong>
+              <p id="saleCountdown">До обновления капсулы: --:--:--</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="split-section reveal">
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Категории</p>
+              <h2>Разделы, которые можно превратить в задачи для студентов</h2>
+            </div>
+            <div class="category-grid">
+              <article class="category-card">
+                <span>01</span>
+                <h3>Уход за кожей</h3>
+                <p>Сыворотки, кремы, тоники и маски с фильтрацией по типу кожи.</p>
+              </article>
+              <article class="category-card">
+                <span>02</span>
+                <h3>Макияж</h3>
+                <p>Тон, румяна, палетки и карточки товаров с избранным.</p>
+              </article>
+              <article class="category-card">
+                <span>03</span>
+                <h3>Body & Hair</h3>
+                <p>Лосьоны, масла и продукты для SPA-ритуалов дома.</p>
+              </article>
+              <article class="category-card">
+                <span>04</span>
+                <h3>Beauty Club</h3>
+                <p>Бонусы, уровни лояльности, запись на консультацию.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Сравнение эффекта</p>
+              <h2>Интерактивный before / after блок</h2>
+            </div>
+            <div class="comparison-card">
+              <div class="comparison-frame" id="comparisonFrame">
+                <div class="comparison-layer comparison-before">
+                  <span class="comparison-label">До</span>
+                </div>
+                <div class="comparison-layer comparison-after">
+                  <span class="comparison-label">После</span>
+                </div>
+              </div>
+              <label class="comparison-control">
+                <span>Покрытие и сияние</span>
+                <input
+                  type="range"
+                  min="10"
+                  max="90"
+                  value="55"
+                  id="comparisonRange"
+                />
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-band reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Преимущества</p>
+            <h2>Что уже умеет эта версия сайта</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <strong>Вкладки и навигация</strong>
+              <p>SPA-поведение без перезагрузки, активные состояния и быстрые переходы.</p>
+            </article>
+            <article class="feature-card">
+              <strong>Умный каталог</strong>
+              <p>Поиск, фильтры, сортировка, избранное, мини-корзина и прогресс доставки.</p>
+            </article>
+            <article class="feature-card">
+              <strong>Квиз по уходу</strong>
+              <p>Персональные рекомендации на основе типа кожи и запроса клиента.</p>
+            </article>
+            <article class="feature-card">
+              <strong>Контентные модули</strong>
+              <p>Журнал, отзывы, FAQ, магазины и формы обратной связи.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="newsletter-card reveal">
+          <div>
+            <p class="section-kicker">Beauty digest</p>
+            <h2>Подписка на капсульные новинки и советы по уходу</h2>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input
+              type="text"
+              id="newsletterEmail"
+              placeholder="Введите ваш email"
+              aria-label="Email для подписки"
+              required
+            />
+            <button class="primary-button" type="submit">Подписаться</button>
+          </form>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="catalog">
+        <section class="content-card reveal">
+          <div class="section-heading wide-gap">
+            <div>
+              <p class="section-kicker">Каталог</p>
+              <h2>Найди уход и макияж под свой запрос</h2>
+            </div>
+            <div class="catalog-toolbar">
+              <label class="search-field">
+                <span>Поиск</span>
+                <input
+                  type="search"
+                  id="catalogSearch"
+                  placeholder="Например, serum, mask, blush"
+                />
+              </label>
+              <label class="select-field">
+                <span>Сортировка</span>
+                <select id="catalogSort">
+                  <option value="popular">По популярности</option>
+                  <option value="price-asc">Цена: по возрастанию</option>
+                  <option value="price-desc">Цена: по убыванию</option>
+                  <option value="newest">Сначала новинки</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <div class="chip-group" id="categoryFilters">
+              <button class="chip is-active" data-category="Все">Все</button>
+              <button class="chip" data-category="Skincare">Skincare</button>
+              <button class="chip" data-category="Makeup">Makeup</button>
+              <button class="chip" data-category="Body">Body</button>
+              <button class="chip" data-category="Hiar">Hair</button>
+            </div>
+            <div class="chip-group soft" id="skinFilters">
+              <button class="chip is-active" data-skin="Все">Любая кожа</button>
+              <button class="chip" data-skin="Dry">Dry</button>
+              <button class="chip" data-skin="Oily">Oily</button>
+              <button class="chip" data-skin="Combination">Combination</button>
+              <button class="chip" data-skin="Sensitive">Sensitive</button>
+            </div>
+          </div>
+
+          <div class="catalog-layout">
+            <div class="catalog-grid" id="catalogGrid"></div>
+            <aside class="catalog-side-panel">
+              <div class="aside-card">
+                <p class="section-kicker">Избранное</p>
+                <h3>Сохраненные позиции</h3>
+                <p id="favoritesSummary">
+                  Пока ничего не добавлено. Отмечай понравившиеся товары сердцем.
+                </p>
+                <button class="secondary-button full-width" id="showFavoriteProducts">
+                  Показать избранное
+                </button>
+              </div>
+              <div class="aside-card">
+                <p class="section-kicker">Доставка</p>
+                <h3>Прогресс бесплатной доставки</h3>
+                <div class="shipping-progress">
+                  <div class="shipping-bar">
+                    <span id="shippingBarFill"></span>
+                  </div>
+                  <p id="shippingMessage">Добавьте товары в корзину</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="ritual">
+        <section class="split-section reveal">
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Smart routine</p>
+              <h2>Квиз по подбору ухода</h2>
+            </div>
+            <form class="ritual-form" id="ritualForm">
+              <label>
+                <span>Тип кожи</span>
+                <select id="skinType" required>
+                  <option value="">Выберите тип кожи</option>
+                  <option value="Dry">Dry</option>
+                  <option value="Oily">Oily</option>
+                  <option value="Combination">Combination</option>
+                  <option value="Sensetive">Sensitive</option>
+                </select>
+              </label>
+              <label>
+                <span>Главная задача</span>
+                <select id="skinGoal" required>
+                  <option value="">Выберите задачу</option>
+                  <option value="Glow">Сияние и свежесть</option>
+                  <option value="Calm">Успокоить кожу</option>
+                  <option value="Balanse">Сбалансировать себум</option>
+                  <option value="Lift">Упругость и тонус</option>
+                </select>
+              </label>
+              <label>
+                <span>Любимая текстура</span>
+                <select id="skinTexture" required>
+                  <option value="">Выберите текстуру</option>
+                  <option value="Light">Легкая</option>
+                  <option value="Creamy">Кремовая</option>
+                  <option value="Rich">Насыщенная</option>
+                </select>
+              </label>
+              <button class="primary-button full-width" type="submit">
+                Показать персональный ритуал
+              </button>
+            </form>
+          </div>
+
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Результат</p>
+              <h2>Утро, вечер и бонусные шаги</h2>
+            </div>
+            <div class="ritual-result" id="ritualResult">
+              <div class="placeholder-state">
+                <strong>Заполни квиз</strong>
+                <p>
+                  После выбора параметров здесь появится готовый уход с подборкой
+                  средств и объяснением логики.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-card reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Этапы ухода</p>
+            <h2>Пошаговая логика для учебного разбора</h2>
+          </div>
+          <div class="timeline-grid">
+            <article class="timeline-card">
+              <span>1</span>
+              <h3>Очищение</h3>
+              <p>Мягкая база без стянутости, чтобы подготовить кожу к активам.</p>
+            </article>
+            <article class="timeline-card">
+              <span>2</span>
+              <h3>Актив</h3>
+              <p>Сыворотка или эссенция в зависимости от задачи клиента.</p>
+            </article>
+            <article class="timeline-card">
+              <span>3</span>
+              <h3>Закрытие</h3>
+              <p>Крем или флюид для удержания влаги и комфорта.</p>
+            </article>
+            <article class="timeline-card">
+              <span>4</span>
+              <h3>SPF или маска</h3>
+              <p>Дневная защита или вечерний восстанавливающий шаг.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="club">
+        <section class="split-section reveal">
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Loyalty</p>
+              <h2>Калькулятор бонусной программы</h2>
+            </div>
+            <label class="range-field">
+              <span>Планируемая сумма заказа</span>
+              <input type="range" id="clubSpendRange" min="1000" max="15000" step="250" value="4500" />
+            </label>
+            <div class="club-summary">
+              <article>
+                <span>Сумма</span>
+                <strong id="clubSpendValue">4 500 RUB</strong>
+              </article>
+              <article>
+                <span>Кэшбек</span>
+                <strong id="clubCashbackValue">225 бонусов</strong>
+              </article>
+              <article>
+                <span>Уровень</span>
+                <strong id="clubTierValue">Blush</strong>
+              </article>
+            </div>
+            <div class="tier-progress">
+              <div class="shipping-bar">
+                <span id="clubTierFill"></span>
+              </div>
+              <p id="clubTierHint">Еще немного до следующего уровня</p>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Beauty service</p>
+              <h2>Запись на консультацию</h2>
+            </div>
+            <form class="consultation-form" id="consultationForm">
+              <label>
+                <span>Формат</span>
+                <select id="consultationType" required>
+                  <option value="">Выберите формат</option>
+                  <option value="Офлайн диагностика">Офлайн диагностика</option>
+                  <option value="Онлайн разбор ухода">Онлайн разбор ухода</option>
+                  <option value="Макияж-сессия">Макияж-сессия</option>
+                </select>
+              </label>
+              <label>
+                <span>Дата</span>
+                <input type="date" id="consultationDate" required />
+              </label>
+              <label>
+                <span>Время</span>
+                <select id="consultationTime" required>
+                  <option value="">Выберите время</option>
+                  <option>11:00</option>
+                  <option>13:30</option>
+                  <option>16:00</option>
+                  <option>18:30</option>
+                </select>
+              </label>
+              <button class="primary-button full-width" type="submit">
+                Забронировать слот
+              </button>
+            </form>
+            <div class="consultation-summary" id="consultationSummary">
+              <strong>Пока нет записи</strong>
+              <p>Выбери формат, дату и время, чтобы сгенерировать подтверждение.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-card reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Уровни клуба</p>
+            <h2>Три статуса с разными бонусами</h2>
+          </div>
+          <div class="tier-grid">
+            <article class="tier-card">
+              <span>Blush</span>
+              <strong>до 5% бонусов</strong>
+              <p>Стартовый уровень с welcome-набором и ранним доступом к новинкам.</p>
+            </article>
+            <article class="tier-card highlighted">
+              <span>Glow</span>
+              <strong>до 7% бонусов</strong>
+              <p>Персональные предложения, beauty-календарь и бесплатные пробники.</p>
+            </article>
+            <article class="tier-card">
+              <span>Velvet</span>
+              <strong>до 10% бонусов</strong>
+              <p>Приоритетная консультация, закрытые дропы и подарки к заказу.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="journal">
+        <section class="content-card reveal">
+          <div class="section-heading wide-gap">
+            <div>
+              <p class="section-kicker">Beauty Journal</p>
+              <h2>Контентный раздел с фильтрацией статей</h2>
+            </div>
+            <div class="chip-group soft" id="articleFilters">
+              <button class="chip is-active" data-article="Все">Все</button>
+              <button class="chip" data-article="Skin">Skin</button>
+              <button class="chip" data-article="Makup">Makeup</button>
+              <button class="chip" data-article="Lifestyle">Lifestyle</button>
+            </div>
+          </div>
+          <div class="journal-grid" id="articleGrid"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-panel="contacts">
+        <section class="split-section reveal">
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">Stores</p>
+              <h2>Бутики и шоурумы</h2>
+            </div>
+            <div class="store-tabs" id="storeTabs"></div>
+            <div class="store-detail" id="storeDetail"></div>
+          </div>
+
+          <div class="content-card">
+            <div class="section-heading">
+              <p class="section-kicker">FAQ</p>
+              <h2>Частые вопросы покупателей</h2>
+            </div>
+            <div class="faq-list" id="faqList">
+              <details class="faq-item" open>
+                <summary>Как работает доставка?</summary>
+                <p>Доставка по городу занимает 1 день, по России от 2 до 5 дней.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли оплатить бонусами?</summary>
+                <p>Да, до 25% заказа можно закрыть накопленными бонусами клуба.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Есть ли офлайн-консультации?</summary>
+                <p>Да, запись доступна в разделе Beauty Club на удобное время.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-card reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Обратная связь</p>
+            <h2>Форма связи с клиентом</h2>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <label>
+              <span>Имя</span>
+              <input type="text" id="contactName" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="text" id="contactEmail" required />
+            </label>
+            <label class="wide-field">
+              <span>Сообщение</span>
+              <textarea id="contactMessage" rows="4"></textarea>
+            </label>
+            <button class="primary-button" type="submit">Отправить сообщение</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="section-kicker">Корзина</p>
+          <h2>Ваш заказ</h2>
+        </div>
+        <button class="icon-button" id="closeCartButton" aria-label="Закрыть корзину">
+          x
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Итого</span>
+          <strong id="cartTotal">0 RUB</strong>
+        </div>
+        <button class="primary-button full-width" id="checkoutButton">
+          Оформить заказ
+        </button>
+      </div>
+    </aside>
+
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
