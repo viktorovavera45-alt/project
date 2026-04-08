@@ -244,17 +244,17 @@
           <div class="filter-row">
             <div class="chip-group" id="categoryFilters">
               <button class="chip is-active" data-category="Все">Все</button>
-              <button class="chip" data-category="Skincare">Skincare</button>
-              <button class="chip" data-category="Makeup">Makeup</button>
-              <button class="chip" data-category="Body">Body</button>
-              <button class="chip" data-category="Hair">Hair</button>
+              <button class="chip" data-category="Уход">Уход</button>
+              <button class="chip" data-category="Макияж">Макияж</button>
+              <button class="chip" data-category="Тело">Тело</button>
+              <button class="chip" data-category="Волосы">Волосы</button>
             </div>
             <div class="chip-group soft" id="skinFilters">
               <button class="chip is-active" data-skin="Все">Любая кожа</button>
-              <button class="chip" data-skin="Dry">Dry</button>
-              <button class="chip" data-skin="Oily">Oily</button>
-              <button class="chip" data-skin="Combination">Combination</button>
-              <button class="chip" data-skin="Sensitive">Sensitive</button>
+              <button class="chip" data-skin="Сухая">Сухая</button>
+              <button class="chip" data-skin="Жирная">Жирная</button>
+              <button class="chip" data-skin="Комбинированная">Комбинированная</button>
+              <button class="chip" data-skin="Чувствительная">Чувствительная</button>
             </div>
           </div>
 
@@ -298,10 +298,10 @@
                 <span>Тип кожи</span>
                 <select id="skinType" required>
                   <option value="">Выберите тип кожи</option>
-                  <option value="Dry">Dry</option>
-                  <option value="Oily">Oily</option>
-                  <option value="Combination">Combination</option>
-                  <option value="Sensitive">Sensitive</option>
+                  <option value="Сухая">Сухая</option>
+                  <option value="Жирная">Жирная</option>
+                  <option value="Комбинированная">Комбинированная</option>
+                  <option value="Чувствительная">Чувствительная</option>
                 </select>
               </label>
               <label>
@@ -310,7 +310,7 @@
                   <option value="">Выберите задачу</option>
                   <option value="Glow">Сияние и свежесть</option>
                   <option value="Calm">Успокоить кожу</option>
-                  <option value="Balanсe">Сбалансировать себум</option>
+                  <option value="Balance">Сбалансировать себум</option>
                   <option value="Lift">Упругость и тонус</option>
                 </select>
               </label>
@@ -483,9 +483,9 @@
             </div>
             <div class="chip-group soft" id="articleFilters">
               <button class="chip is-active" data-article="Все">Все</button>
-              <button class="chip" data-article="Skin">Skin</button>
-              <button class="chip" data-article="Makeup">Makeup</button>
-              <button class="chip" data-article="Lifestyle">Lifestyle</button>
+              <button class="chip" data-article="Уход">Уход</button>
+              <button class="chip" data-article="Макияж">Макияж</button>
+              <button class="chip" data-article="Образ жизни">Образ жизни</button>
             </div>
           </div>
           <div class="journal-grid" id="articleGrid"></div>
@@ -533,11 +533,11 @@
           <form class="contact-form" id="contactForm">
             <label>
               <span>Имя</span>
-              <input type="email" id="contactName" required />
+              <input type="text" id="contactName" required />
             </label>
             <label>
               <span>Email</span>
-              <input type="text" id="contactEmail" required />
+              <input type="email" id="contactEmail" required />
             </label>
             <label class="wide-field">
               <span>Сообщение</span>
