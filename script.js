@@ -512,7 +512,7 @@ function getFilteredProducts() {
 
   switch (state.sort) {
     case "price-asc":
-      result.sort((first, second) => second.price - first.price);
+      result.sort((first, second) => first.price - second.price);
       break;
     case "price-desc":
       result.sort((first, second) => first.price - second.price);
