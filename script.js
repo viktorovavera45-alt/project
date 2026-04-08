@@ -2,8 +2,8 @@ const products = [
   {
     id: 1,
     name: "Rose Cloud Essence",
-    category: "Skincare",
-    skin: "Dry",
+    category: "Уход",
+    skin: "Сухая",
     price: 2950,
     oldPrice: 3400,
     rating: 4.9,
@@ -18,8 +18,8 @@ const products = [
   {
     id: 2,
     name: "Velvet Dew Cream",
-    category: "Skincare",
-    skin: "Sensitive",
+    category: "Уход",
+    skin: "Чувствительная",
     price: 3250,
     oldPrice: 3590,
     rating: 4.8,
@@ -34,7 +34,7 @@ const products = [
   {
     id: 3,
     name: "Glass Tint Blush",
-    category: "Makeup",
+    category: "Макияж",
     skin: "Все",
     price: 1890,
     oldPrice: 0,
@@ -50,8 +50,8 @@ const products = [
   {
     id: 4,
     name: "Pure Balance Toner",
-    category: "Skincare",
-    skin: "Oily",
+    category: "Уход",
+    skin: "Жирная",
     price: 1790,
     oldPrice: 2190,
     rating: 4.6,
@@ -66,8 +66,8 @@ const products = [
   {
     id: 5,
     name: "Golden Hour SPF 50",
-    category: "Skincare",
-    skin: "Combination",
+    category: "Уход",
+    skin: "Комбинированная",
     price: 2490,
     oldPrice: 2790,
     rating: 4.9,
@@ -82,8 +82,8 @@ const products = [
   {
     id: 6,
     name: "Moon Silk Mask",
-    category: "Body",
-    skin: "Dry",
+    category: "Тело",
+    skin: "Сухая",
     price: 2150,
     oldPrice: 2490,
     rating: 4.8,
@@ -98,7 +98,7 @@ const products = [
   {
     id: 7,
     name: "Mirror Glow Foundation",
-    category: "Makeup",
+    category: "Макияж",
     skin: "Все",
     price: 3390,
     oldPrice: 3790,
@@ -114,8 +114,8 @@ const products = [
   {
     id: 8,
     name: "Botanic Scalp Elixir",
-    category: "Hair",
-    skin: "Sensitive",
+    category: "Волосы",
+    skin: "Чувствительная",
     price: 2590,
     oldPrice: 0,
     rating: 4.5,
@@ -130,8 +130,8 @@ const products = [
   {
     id: 9,
     name: "Soft Veil Cleansing Oil",
-    category: "Skincare",
-    skin: "Combination",
+    category: "Уход",
+    skin: "Комбинированная",
     price: 2290,
     oldPrice: 2590,
     rating: 4.8,
@@ -146,7 +146,7 @@ const products = [
   {
     id: 10,
     name: "Amber Body Souffle",
-    category: "Body",
+    category: "Тело",
     skin: "Все",
     price: 1990,
     oldPrice: 2390,
@@ -162,8 +162,8 @@ const products = [
   {
     id: 11,
     name: "Petal Jelly Serum",
-    category: "Skincare",
-    skin: "Oily",
+    category: "Уход",
+    skin: "Жирная",
     price: 2790,
     oldPrice: 3150,
     rating: 4.7,
@@ -178,7 +178,7 @@ const products = [
   {
     id: 12,
     name: "Velour Brow Fix",
-    category: "Makeup",
+    category: "Макияж",
     skin: "Все",
     price: 1490,
     oldPrice: 1690,
@@ -197,7 +197,7 @@ const articles = [
   {
     id: 1,
     title: "Как собрать утренний уход из 4 шагов",
-    tag: "Skin",
+    tag: "Уход",
     readTime: "5 мин",
     date: "03 апреля",
     description: "Простой алгоритм: очищение, актив, крем и SPF без перегруза кожи.",
@@ -206,7 +206,7 @@ const articles = [
   {
     id: 2,
     title: "Кремовые текстуры в макияже: почему они снова в центре внимания",
-    tag: "Makeup",
+    tag: "Макияж",
     readTime: "7 мин",
     date: "01 апреля",
     description: "Разбираем, как работать с glow-румянами, тоном и хайлайтерами.",
@@ -215,7 +215,7 @@ const articles = [
   {
     id: 3,
     title: "Домашний SPA-вечер: лосьон, маска и музыка",
-    tag: "Lifestyle",
+    tag: "Образ жизни",
     readTime: "4 мин",
     date: "28 марта",
     description: "Небольшой ритуал, который превращает обычный вечер в восстановление.",
@@ -224,7 +224,7 @@ const articles = [
   {
     id: 4,
     title: "Как понять, что коже нужен барьерный крем",
-    tag: "Skin",
+    tag: "Уход",
     readTime: "6 мин",
     date: "25 марта",
     description: "Покраснение, шелушение и реактивность как сигналы на восстановление.",
@@ -233,7 +233,7 @@ const articles = [
   {
     id: 5,
     title: "Три способа носить сияющий тон без эффекта маски",
-    tag: "Makeup",
+    tag: "Макияж",
     readTime: "8 мин",
     date: "21 марта",
     description: "Техника нанесения пальцами, кистью и влажным спонжем.",
@@ -242,7 +242,7 @@ const articles = [
   {
     id: 6,
     title: "Мини-ритуалы, которые делают магазин запоминающимся",
-    tag: "Lifestyle",
+    tag: "Образ жизни",
     readTime: "5 мин",
     date: "18 марта",
     description: "Атмосфера сервиса, ароматы, карточки рекомендаций и персонализация.",
@@ -284,7 +284,7 @@ const stores = [
 ];
 
 const routineRecommendations = {
-  Dry: {
+  Сухая: {
     Glow: {
       title: "Glow-комплекс для сухой кожи",
       morning: ["Soft Veil Cleansing Oil", "Rose Cloud Essence", "Velvet Dew Cream", "Golden Hour SPF 50"],
@@ -310,7 +310,7 @@ const routineRecommendations = {
       tip: "Пептиды и насыщенные кремы помогают сделать рельеф более гладким и упругим."
     }
   },
-  Oily: {
+  Жирная: {
     Glow: {
       title: "Glow для жирной кожи",
       morning: ["Pure Balance Toner", "Petal Jelly Serum", "Golden Hour SPF 50"],
@@ -336,7 +336,7 @@ const routineRecommendations = {
       tip: "Подтягивающий эффект можно собрать и в гелевых текстурах, если коже жарко."
     }
   },
-  Combination: {
+  Комбинированная: {
     Glow: {
       title: "Сбалансированное сияние",
       morning: ["Soft Veil Cleansing Oil", "Rose Cloud Essence", "Golden Hour SPF 50"],
@@ -362,7 +362,7 @@ const routineRecommendations = {
       tip: "Ставим лифтинг-активы в центр схемы, сохраняя комфорт на сухих зонах."
     }
   },
-  Sensitive: {
+  Чувствительная: {
     Glow: {
       title: "Мягкое сияние без раздражения",
       morning: ["Velvet Dew Cream", "Rose Cloud Essence", "Golden Hour SPF 50"],
@@ -613,7 +613,7 @@ function updateFavoritesSummary() {
   const extra = state.favorites.length > 3 ? ` и еще ${state.favorites.length - 3}` : "";
   elements.favoritesSummary.textContent = `Сейчас сохранено: ${names.join(", ")}${extra}.`;
 }
-// Задача 8 выполнена. Изменений не требуется
+
 function updateShippingProgress() {
   const total = getCartTotal();
   const freeShippingThreshold = 5900;
@@ -761,7 +761,7 @@ function renderRoutineResult(skinType, goal, texture) {
       <div>
         <p class="section-kicker">Персональный ритуал</p>
         <h3>${recommendation.title}</h3>
-        <p>Схема собрана для ${skinType.toLowerCase()} skin с акцентом на ${goal.toLowerCase()} и любовь к ${textureText}.</p>
+        <p>Схема собрана для ${skinType.toLowerCase()} кожи с акцентом на ${goal.toLowerCase()} и любовь к ${textureText}.</p>
       </div>
       <div>
         <strong>Утро</strong>
@@ -782,7 +782,7 @@ function renderRoutineResult(skinType, goal, texture) {
 function updateClubSummary() {
   const amount = Number(elements.spendRange.value);
   const tier = amount >= 9000 ? "Velvet" : amount >= 5000 ? "Glow" : "Blush";
-  const percent = tier === "Velvet" ? 10 : tier === "Glow" ? 7 : 5;
+  const percent = tier === "Velvet" ? 8 : tier === "Glow" ? 5 : 3;
   const cashback = Math.round(amount * (percent / 100));
   const progress = Math.min((amount / 9000) * 100, 100);
 
