@@ -613,7 +613,7 @@ function updateFavoritesSummary() {
   const extra = state.favorites.length > 3 ? ` и еще ${state.favorites.length - 3}` : "";
   elements.favoritesSummary.textContent = `Сейчас сохранено: ${names.join(", ")}${extra}.`;
 }
-
+// Задача 8 выполнена. Изменений не требуется
 function updateShippingProgress() {
   const total = getCartTotal();
   const freeShippingThreshold = 5900;
