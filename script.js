@@ -114,7 +114,7 @@ const products = [
   {
     id: 8,
     name: "Botanic Scalp Elixir",
-    category: "Haircare",
+    category: "Hair",
     skin: "Sensitive",
     price: 2590,
     oldPrice: 0,
