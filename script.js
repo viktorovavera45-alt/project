@@ -450,7 +450,7 @@ const elements = {
 };
 
 function formatPrice(value) {
-  return `${new Intl.NumberFormat("ru-RU").format(value)} RUB`;
+  return `${new Intl.NumberFormat("ru-RU").format(value)} ₽`;
 }
 
 function persistState() {
