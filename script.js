@@ -782,7 +782,7 @@ function renderRoutineResult(skinType, goal, texture) {
 function updateClubSummary() {
   const amount = Number(elements.spendRange.value);
   const tier = amount >= 9000 ? "Velvet" : amount >= 5000 ? "Glow" : "Blush";
-  const percent = tier === "Velvet" ? 8 : tier === "Glow" ? 5 : 3;
+  const percent = tier === "Velvet" ? 10 : tier === "Glow" ? 7 : 5;
   const cashback = Math.round(amount * (percent / 100));
   const progress = Math.min((amount / 9000) * 100, 100);
 
