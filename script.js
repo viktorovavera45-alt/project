@@ -833,7 +833,7 @@ function renderStores() {
     const button = document.createElement("button");
     button.className = `store-button ${index === 0 ? "is-active" : ""}`;
     button.textContent = store.city;
-    button.dataset.store = index === 1 ? "spbb" : store.id;
+    button.dataset.store = store.id;
     elements.storeTabs.appendChild(button);
   });
 
