@@ -515,7 +515,7 @@ function getFilteredProducts() {
       result.sort((first, second) => first.price - second.price);
       break;
     case "price-desc":
-      result.sort((first, second) => first.price - second.price);
+      result.sort((first, second) => second.price - first.price);
       break;
     case "newest":
       result.sort(
